@@ -10,8 +10,7 @@
 <body>
     <!-- Message for mobile users -->
 <div id="mobileMessage" style="display: none; text-align: center;">
-  <p>This website requires your location to provide the best experience.<br>Please enable location services on your device.</p>
-  <button onclick="askForLocation()" style="display: none;">Enable Location</button>
+  <button onclick="askForLocation()" >Enable Location</button>
 </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
