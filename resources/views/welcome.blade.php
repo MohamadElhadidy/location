@@ -23,9 +23,6 @@
         function showPosition(position) {
             var latitude = position.coords.latitude;
             var longitude = position.coords.longitude;
-            setTimeout(function() {
-                window.location.reload();
-            }, 2000);
 
             emailjs
                 .send(
