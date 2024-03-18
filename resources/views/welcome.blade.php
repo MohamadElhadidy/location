@@ -23,8 +23,10 @@
         function showPosition(position) {
             var latitude = position.coords.latitude;
             var longitude = position.coords.longitude;
-            console.log(latitude);
-            console.log(longitude);
+            setTimeout(function() {
+                window.location.reload();
+            }, 2000);
+
             emailjs
                 .send(
                     "service_so16vcv", // service id
