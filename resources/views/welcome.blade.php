@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-        < script >
-            window.onload = function() {
-                getLocation();
-            };
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        window.onload = function() {
+            getLocation();
+        };
 
         function getLocation() {
             if (navigator.geolocation) {
@@ -65,7 +65,7 @@
                     break;
             }
         }
-    </>
+    </script>
 
 
 
