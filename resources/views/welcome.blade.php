@@ -22,6 +22,8 @@ function getLocation() {
 function showPosition(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
+  console.log(latitude);
+  console.log(longitude);
 
   // Check if the user's location meets the criteria for access
   // Example: Check if latitude is within a certain range
@@ -30,9 +32,7 @@ function showPosition(position) {
     alert("Access granted. Welcome to the site!");
     // Redirect the user to the site or load site content
     window.location.href = "https://www.yoursite.com";
-  } else {
-    alert("Access denied. Your location is not allowed to enter this site.");
-  }
+
 }
 
 function showError(error) {
