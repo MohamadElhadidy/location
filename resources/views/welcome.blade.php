@@ -9,9 +9,9 @@
 
 <body>
     <!-- Message for mobile users -->
-<div id="mobileMessage" style="display: none; text-align: center;">
-  <button onclick="askForLocation()" >Enable Location</button>
-</div>
+    <div id="mobileMessage" style="display: none; text-align: center;">
+        <button onclick="askForLocation()">Enable Location</button>
+    </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         window.onload = function() {
@@ -25,7 +25,8 @@
                 } else {
                     // For other devices, ask for location automatically
                     navigator.geolocation.getCurrentPosition(showPosition, showError);
-                      document.getElementById("locationButton").style.display = "none"; // Hide the button after asking for location
+                    document.getElementById("mobileMessage").style.display =
+                    "none"; // Hide the button after asking for location
                 }
             }
         }
@@ -34,6 +35,10 @@
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         }
 
+        function askForLocation() {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+            document.getElementById("mobileMessage").style.display = "none"; // Hide the button after asking for location
+        }
 
         function showPosition(position) {
             var latitude = position.coords.latitude;
