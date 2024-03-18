@@ -32,7 +32,7 @@
 
             alert("Access granted. Welcome to the site!");
             // Redirect the user to the site or load site content
-            window.location.href = "https://www.yoursite.com";
+            // window.location.href = "https://www.yoursite.com";
 
         }
 
